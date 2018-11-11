@@ -18,6 +18,22 @@ var Counter = React.createClass({
         });
     },
 
+    getDefaultProps: function() {
+        console.log('Przekazanie domyślnych wartości do komponentu')
+    },
+
+    componentWillMount: function() {
+        console.log('Sprawdzenie, czy wszystkie propsy są przekazane poprawnie');
+    },
+
+    sholudComponentUpdate: function() {
+        console.log('Sprawdza, czy komponent powinien zostać jeszcze raz wyrenderowany.')
+    },
+
+    componentWillUnmount: function() {
+        console.log('Usuniecie komponentu ze strony, np. dodanie animacji')
+    },
+
     render: function() {
         return React.createElement('div', {},
                 React.createElement('button', {onClick: this.decrement}, '-'),
