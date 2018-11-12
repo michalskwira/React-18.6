@@ -28,6 +28,7 @@ var Counter = React.createClass({
 
     sholudComponentUpdate: function() {
         console.log('Sprawdza, czy komponent powinien zostać jeszcze raz wyrenderowany.')
+            return true;
     },
 
     componentWillUnmount: function() {
